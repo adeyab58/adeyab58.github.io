@@ -3,115 +3,55 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Merat Semma - Portfolio">
-    <title>Merat Semma - Personal Portfolio</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Merat Semma - Home</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #333;
+            padding: 1rem;
+            text-align: center;
+            color: white;
+        }
+        nav {
+            text-align: center;
+            margin: 1rem 0;
+        }
+        nav a {
+            margin: 0 1rem;
+            text-decoration: none;
+            color: #333;
+            font-size: 1.2rem;
+        }
+        nav a:hover, nav a.active {
+            color: #007bff;
+        }
+        section {
+            padding: 2rem;
+        }
+    </style>
 </head>
 <body>
-    <!-- Navigation -->
-    <nav>
-        <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#honors">Honors & Awards</a></li>
-            <li><a href="#certifications">Certifications</a></li>
-            <li><a href="#references">References</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </nav>
 
-    <!-- Home Section -->
-    <section id="home" class="section-home">
-        <div class="container">
-            <h1>Welcome! I'm <span>Merat Semma</span></h1>
-            <p>Molecular Biophysics & Biochemistry Student at Yale University</p>
-            <p>I'm passionate about RNA biochemistry, global health, and research that makes an impact.</p>
-        </div>
-    </section>
+<header>
+    <h1>Welcome! I'm <span>Merat Semma</span></h1>
+    <p>Molecular Biophysics & Biochemistry Student at Yale University</p>
+</header>
 
-    <!-- About Me Section -->
-    <section id="about" class="section-about">
-        <div class="container">
-            <h2>About Me</h2>
-            <p>I am a Molecular Biophysics & Biochemistry student at Yale University, with a focus on RNA biochemistry and global health. My academic journey has equipped me with practical lab skills, computational analysis experience, and a passion for research.</p>
-        </div>
-    </section>
+<nav>
+    <a href="#" class="active">Home</a>
+    <a href="#">About</a> <!-- Later you can activate this -->
+    <a href="#">Projects</a> <!-- Later you can activate this -->
+    <a href="#">Contact</a> <!-- Later you can activate this -->
+</nav>
 
-    <!-- Projects Section -->
-    <section id="projects" class="section-projects">
-        <div class="container">
-            <h2>Projects</h2>
-            <!-- Lab Projects -->
-            <div class="project-category">
-                <h3>Lab Projects</h3>
-                <div class="project-item">
-                    <h4>Breast Cancer Gene Expression Analysis</h4>
-                    <p>Course: MB&B 300 | Professor: Dr. Wendy Gilbert</p>
-                    <p>Analyzed gene expression datasets to identify key cancer genes using R and Python. <a href="path_to_upload.pdf" target="_blank">View Project</a></p>
-                </div>
-                <div class="project-item">
-                    <h4>Foldit Enzyme Mutagenesis Project</h4>
-                    <p>Course: Molecular Biology | Professor: Dr. Matt Simon</p>
-                    <p>Used Foldit software to explore β-glucosidase enzyme mutagenesis. <a href="path_to_upload.pdf" target="_blank">View Project</a></p>
-                </div>
-            </div>
-            <!-- Lecture Coursework Projects -->
-            <div class="project-category">
-                <h3>Lecture Coursework Projects</h3>
-                <div class="project-item">
-                    <h4>Advanced Biochemistry Course Final Project</h4>
-                    <p>Course: Advanced Biochemistry | Professor: Dr. Anne Smith</p>
-                    <p>Researched and presented on enzyme kinetics and protein folding.</p>
-                </div>
-            </div>
-        </div>
-    </section>
+<section id="home">
+    <h2>Home</h2>
+    <p>Welcome to my personal page! I'm a Molecular Biophysics & Biochemistry student passionate about RNA biochemistry, global health, and research that makes an impact. Explore my page to learn more about my work, interests, and ongoing projects.</p>
+</section>
 
-    <!-- Honors & Awards Section -->
-    <section id="honors" class="section-honors">
-        <div class="container">
-            <h2>Honors & Awards</h2>
-            <ul>
-                <li>Cum Laude Honors in Biomedical Engineering, Yale University (2024)</li>
-                <li>Dean’s List, Yale University (2022, 2023)</li>
-            </ul>
-        </div>
-    </section>
-
-    <!-- Certifications Section -->
-    <section id="certifications" class="section-certifications">
-        <div class="container">
-            <h2>Certifications</h2>
-            <ul>
-                <li>Lab Safety Certified, Yale University</li>
-                <li>RNA Extraction & qPCR Techniques Certified</li>
-            </ul>
-        </div>
-    </section>
-
-    <!-- References Section -->
-    <section id="references" class="section-references">
-        <div class="container">
-            <h2>References</h2>
-            <p>Available upon request. Please contact me for more information.</p>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="section-contact">
-        <div class="container">
-            <h2>Contact Me</h2>
-            <p>Email: <a href="mailto:merat.semma@yale.edu">merat.semma@yale.edu</a></p>
-            <p>LinkedIn: <a href="https://www.linkedin.com/in/merat-semma" target="_blank">LinkedIn Profile</a></p>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer>
-        <p>&copy; 2024 Merat Semma</p>
-    </footer>
 </body>
 </html>
-
-       
