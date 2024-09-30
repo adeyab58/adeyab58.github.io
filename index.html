@@ -1,4 +1,6 @@
-1<!DOCTYPE html>
+
+
+       <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -111,9 +113,11 @@
 <nav>
     <a href="#home" class="tab-link active" onclick="showTab(event, 'home')">Home</a>
     <a href="#about" class="tab-link" onclick="showTab(event, 'about')">About & Resume</a>
+    <a href="#education" class="tab-link" onclick="showTab(event, 'education')">Education</a>
     <a href="#work-experience" class="tab-link" onclick="showTab(event, 'work-experience')">Work Experience</a>
     <a href="#extracurriculars" class="tab-link" onclick="showTab(event, 'extracurriculars')">Extracurriculars</a>
     <a href="#honors" class="tab-link" onclick="showTab(event, 'honors')">Honors & Awards</a>
+    <a href="#references" class="tab-link" onclick="showTab(event, 'references')">References</a>
     <a href="#contact" class="tab-link" onclick="showTab(event, 'contact')">Contact</a>
 </nav>
 
@@ -131,7 +135,8 @@
 <div id="about" class="tab-content">
     <section class="container">
         <h2>About Me & Resume</h2>
-        <p>I'm a Molecular Biophysics and Biochemistry student at Yale University, passionate about research and global health.</p>
+        <p>I am currently a junior studying Molecular Biophysics and Biochemistry at Yale University. My academic journey has been shaped by my love for research, particularly in RNA biochemistry and global health.</p>
+        <p>Apart from my academic life, I enjoy cooking and dancing, which allow me to express creativity in different ways. I am particularly passionate about using my knowledge to help underserved communities, and I am always eager to learn about new advancements in medicine that can make a positive impact on global health, especially in women's and children's health.</p>
         <div class="download-links">
             <a href="path/to/your-cv.pdf" download>Download My CV</a>
             <a href="path/to/your-resume.pdf" download>Download My Resume</a>
@@ -139,17 +144,55 @@
     </section>
 </div>
 
+<!-- Education Tab -->
+<div id="education" class="tab-content">
+    <section class="container">
+        <h2>Education</h2>
+        <h3>Yale University</h3>
+        <p><strong>Location:</strong> New Haven, CT</p>
+        <p><strong>Degree:</strong> Bachelor of Science in Molecular Biophysics and Biochemistry</p>
+        <p><strong>Concentration:</strong> Computational Biology and Bioinformatics</p>
+        <p><strong>Minor:</strong> Global Health Studies</p>
+        <p><strong>GPA:</strong> 3.97</p>
+        <p><strong>Expected Graduation:</strong> May 2026</p>
+        <!-- Transcript Download Link -->
+        <p><strong>Download Transcript:</strong> <a href="transcript.pdf" target="_blank">Click here to download</a></p>
+    </section>
+</div>
+
 <!-- Work Experience Tab -->
 <div id="work-experience" class="tab-content">
     <section class="container">
         <h2>Work Experience</h2>
-        <h3>Hospice Ethiopia</h3>
+        <h3>Hospice Ethiopia, Addis Ababa, Ethiopia</h3>
         <p><strong>Position:</strong> Intern, Global Health Researcher (Summer 2024)</p>
         <ul>
-            <li>Created educational teaching videos for healthcare providers in Ethiopia.</li>
-            <li>Conducted 120+ home care visits and integrated spiritual support into palliative care practices.</li>
+            <li>Created educational teaching videos for healthcare providers in Ethiopia, improving the accessibility and quality of palliative care.</li>
+            <li>Conducted 120+ home care visits and integrated spiritual support into palliative care practices, working with religious leaders.</li>
         </ul>
-        <!-- Add additional work experiences here -->
+
+        <h3>Yale University, New Haven, CT</h3>
+        <p><strong>Position:</strong> Peer Liaison (Present)</p>
+        <ul>
+            <li>Provided guidance to 20+ international first-year students on academic, social, and cultural challenges.</li>
+            <li>Organized workshops and community events to foster social integration and support for international students.</li>
+        </ul>
+
+        <h3>STEM Navigators & FGLI Thrive Mentor (Present)</h3>
+        <ul>
+            <li>Mentored 16 FGLI students, including 9 in STEM fields, helping them overcome academic challenges.</li>
+            <li>Organized weekly workshops attended by 15+ students, focusing on study techniques, research opportunities, and networking.</li>
+        </ul>
+
+        <h3>Undergraduate Learning Assistant/Peer Tutor for General Chemistry (August 2023 – January 2024)</h3>
+        <ul>
+            <li>Tutored 107+ students in General Chemistry through one-on-one and group study sessions.</li>
+        </ul>
+
+        <h3>Lab Safety Staff for Chemistry Department (February 2023 – May 2024)</h3>
+        <ul>
+            <li>Managed safety protocols in Yale's Chemistry Department, ensuring compliance with safety standards.</li>
+        </ul>
     </section>
 </div>
 
@@ -158,53 +201,17 @@
     <section class="container">
         <h2>Extracurricular Activities</h2>
         <h3>Yale Ethiopian & Eritrean Students Association & Desta Dance</h3>
-        <p><strong>Role:</strong> Co-founder, President</p>
-        <p><strong>Dates:</strong> 2022 - present</p>
+        <p><strong>Role:</strong> Co-founder, President (2022 - present)</p>
         <ul>
             <li>Co-founder and lead choreographer for Desta Dance, promoting Ethiopian culture and expression at Yale.</li>
+            <li>Organized mentor-mentee societies to support underclassmen at Yale.</li>
         </ul>
-        <!-- Add additional extracurriculars here -->
-    </section>
-</div>
 
-<!-- Honors & Awards Tab -->
-<div id="honors" class="tab-content">
-    <section class="container">
-        <h2>Honors & Awards</h2>
-        <h3>STARS Summer Research Assistant</h3>
-        <p>Selected as a research assistant for the STARS Summer program, gaining hands-on research experience.</p>
-    </section>
-</div>
+        <h3>Yale Women’s Center</h3>
+        <p><strong>Role:</strong> Events Coordinator (2023 - present)</p>
+        <ul>
+            <li>Collaborated with staff to plan and coordinate events, including the Women's Week series.</li>
+        </ul>
 
-<!-- Contact Tab -->
-<div id="contact" class="tab-content">
-    <section class="container">
-        <h2>Contact Me</h2>
-        <p>Email: <a href="mailto:merat.semma@yale.edu">merat.semma@yale.edu</a></p>
-        <p>LinkedIn: <a href="https://www.linkedin.com/in/merat-semma-final" target="_blank">LinkedIn Profile</a></p>
-    </section>
-</div>
-
-<!-- Footer -->
-<footer>
-    <p>&copy; 2024 Merat Semma</p>
-</footer>
-
-<script>
-    function showTab(event, tabId) {
-        // Hide all tabs
-        const tabContents = document.querySelectorAll('.tab-content');
-        tabContents.forEach(tab => tab.classList.remove('active'));
-
-        // Deactivate all tabs
-        const tabLinks = document.querySelectorAll('.tab-link');
-        tabLinks.forEach(link => link.classList.remove('active'));
-
-        // Show the clicked tab
-        document.getElementById(tabId).classList.add('active');
-        event.currentTarget.classList.add('active');
-    }
-</script>
-
-</body>
-</html>
+        <h3>Women in Chemistry</h3>
+        <p><strong>Role:</strong> Vice-President,
