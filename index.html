@@ -40,7 +40,7 @@
             display: inline-block;
         }
 
-        nav a:hover {
+        nav a:hover, nav a.active {
             background-color: #0056b3; /* Darker blue on hover */
         }
 
@@ -109,14 +109,14 @@
 
 <!-- Tab Navigation -->
 <nav>
-    <a href="#home" class="tab-link active" onclick="showTab(event, 'home')">Home</a>
-    <a href="#about" class="tab-link" onclick="showTab(event, 'about')">About & Resume</a>
-    <a href="#education" class="tab-link" onclick="showTab(event, 'education')">Education</a>
-    <a href="#work-experience" class="tab-link" onclick="showTab(event, 'work-experience')">Work Experience</a>
-    <a href="#extracurriculars" class="tab-link" onclick="showTab(event, 'extracurriculars')">Extracurriculars</a>
-    <a href="#honors" class="tab-link" onclick="showTab(event, 'honors')">Honors & Awards</a>
-    <a href="#references" class="tab-link" onclick="showTab(event, 'references')">References</a>
-    <a href="#contact" class="tab-link" onclick="showTab(event, 'contact')">Contact</a>
+    <a href="javascript:void(0);" class="tab-link active" onclick="showTab(event, 'home')">Home</a>
+    <a href="javascript:void(0);" class="tab-link" onclick="showTab(event, 'about')">About & Resume</a>
+    <a href="javascript:void(0);" class="tab-link" onclick="showTab(event, 'education')">Education</a>
+    <a href="javascript:void(0);" class="tab-link" onclick="showTab(event, 'work-experience')">Work Experience</a>
+    <a href="javascript:void(0);" class="tab-link" onclick="showTab(event, 'extracurriculars')">Extracurriculars</a>
+    <a href="javascript:void(0);" class="tab-link" onclick="showTab(event, 'honors')">Honors & Awards</a>
+    <a href="javascript:void(0);" class="tab-link" onclick="showTab(event, 'references')">References</a>
+    <a href="javascript:void(0);" class="tab-link" onclick="showTab(event, 'contact')">Contact</a>
 </nav>
 
 <!-- Tab Content -->
@@ -212,4 +212,4 @@
         </ul>
 
         <h3>Women in Chemistry</h3>
-        <p><strong>Role:</strong> Vice-President, Social Chair (2022
+        <p
