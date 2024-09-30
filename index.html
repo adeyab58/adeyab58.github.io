@@ -1,115 +1,83 @@
-<!DOCTYPE html>
+1<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Merat Semma - Home</title>
+    <title>Merat Semma - Portfolio</title>
     <style>
+        /* General Styling */
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Arial', sans-serif;
             margin: 0;
             padding: 0;
+            background-color: #f0f0f0;
+            color: #333;
         }
+
         header {
             background-color: #333;
             padding: 1rem;
             text-align: center;
             color: white;
         }
-        nav {
-            text-align: center;
-            margin: 1rem 0;
-        }
-        nav a {
-            margin: 0 1rem;
-            text-decoration: none;
-            color: #333;
-            font-size: 1.2rem;
-        }
-        nav a:hover, nav a.active {
-            color: #007bff;
-        }
-        section {
-            padding: 2rem;
-            text-align: center;
-        }
-        img {
-            max-width: 300px;
-            border-radius: 50%;
-            margin-top: 1rem;
-        }
-    </style>
-</head>
-<body>
 
-<header>
-    <h1>Welcome! I'm <span>Merat Semma</span></h1>
-    <p>Molecular Biophysics & Biochemistry Student at Yale University</p>
-</header>
-
-<nav>
-    <a href="#" class="active">Home</a>
-    <a href="#">About</a> <!-- Later you can activate this -->
-    <a href="#">Projects</a> <!-- Later you can activate this -->
-    <a href="#">Contact</a> <!-- Later you can activate this -->
-</nav>
-
-<section id="home">
-    <h2>Home</h2>
-    <img src="your-image.jpg" alt="Merat Semma">
-    <p>Welcome to my personal page! I'm a Molecular Biophysics & Biochemistry student passionate about RNA biochemistry, global health, and research that makes an impact. Explore my page to learn more about my work, interests, and ongoing projects.</p>
-</section>
-
-</body>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Merat Semma - About Me & CV/Resume</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
+        h1 {
             margin: 0;
-            padding: 0;
+            font-size: 2.5rem;
         }
-        header {
-            background-color: #333;
-            padding: 1rem;
-            text-align: center;
-            color: white;
-        }
+
         nav {
-            text-align: center;
-            margin: 1rem 0;
+            display: flex;
+            justify-content: center;
+            background-color: #4CAF50;
         }
+
         nav a {
-            margin: 0 1rem;
+            padding: 1rem 2rem;
             text-decoration: none;
-            color: #333;
+            color: white;
             font-size: 1.2rem;
+            display: inline-block;
         }
-        nav a:hover, nav a.active {
-            color: #007bff;
+
+        nav a:hover {
+            background-color: #45a049;
         }
-        section {
-            padding: 2rem;
+
+        /* Tabbed Content */
+        .tab-content {
+            display: none;
+            padding: 20px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin: 20px;
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+
+        h2 {
+            color: #4CAF50;
             text-align: center;
         }
-        img {
-            max-width: 300px;
-            border-radius: 50%;
-            margin-top: 1rem;
-        }
-        .about-text {
-            max-width: 800px;
-            margin: 2rem auto;
+
+        ul {
             text-align: left;
-            line-height: 1.6;
+            list-style-type: disc;
+            padding-left: 40px;
         }
-        .download-links {
-            margin-top: 2rem;
+
+        ul li {
+            margin-bottom: 10px;
         }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
         .download-links a {
             display: inline-block;
             margin: 1rem;
@@ -119,303 +87,124 @@
             text-decoration: none;
             border-radius: 5px;
         }
+
         .download-links a:hover {
             background-color: #0056b3;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
         }
     </style>
 </head>
 <body>
 
 <header>
-    <h1>About Me & CV/Resume - <span>Merat Semma</span></h1>
+    <h1>Welcome! I'm Merat Semma</h1>
+    <p>Molecular Biophysics & Biochemistry Student at Yale University</p>
 </header>
 
+<!-- Tab Navigation -->
 <nav>
-    <a href="index.html">Home</a> <!-- Link back to the home page -->
-    <a href="#" class="active">About Me & CV/Resume</a> <!-- Active section -->
-    <a href="#">Projects</a> <!-- Later you can activate this -->
-    <a href="#">Contact</a> <!-- Later you can activate this -->
+    <a href="#home" class="tab-link active" onclick="showTab(event, 'home')">Home</a>
+    <a href="#about" class="tab-link" onclick="showTab(event, 'about')">About & Resume</a>
+    <a href="#work-experience" class="tab-link" onclick="showTab(event, 'work-experience')">Work Experience</a>
+    <a href="#extracurriculars" class="tab-link" onclick="showTab(event, 'extracurriculars')">Extracurriculars</a>
+    <a href="#honors" class="tab-link" onclick="showTab(event, 'honors')">Honors & Awards</a>
+    <a href="#contact" class="tab-link" onclick="showTab(event, 'contact')">Contact</a>
 </nav>
 
-<section id="about">
-    <h2>About Me</h2>
-    <img src="your-image.jpg" alt="Merat Semma">
-    <div class="about-text">
-        <p>Welcome! If you’ve already visited my home page, you know a bit about my academic background. Here, I’d like to share more about my journey as a Molecular Biophysics and Biochemistry student at Yale University, my passion for RNA biochemistry, and my commitment to global health initiatives.</p>
-        
-        <p>I am deeply engaged in research aimed at understanding how RNA impacts human health, and I have a specific focus on discovering new ways to address health challenges in underserved communities. Through my academic work and global health efforts, I strive to make a meaningful impact on women's and children's health, particularly in Ethiopia.</p>
-        
-        <p>When I’m not in the lab, I’m often involved in leadership activities, helping to mentor and guide younger students while advocating for diversity and inclusivity in the scientific community. I’m excited to continue exploring opportunities that allow me to merge my love for science and service.</p>
-    </div>
+<!-- Tab Content -->
 
-    <!-- Download Links for CV and Resume -->
-    <div class="download-links">
-        <h2>Interested in Learning More?</h2>
-        <p>If you’d like to dive deeper into my academic journey and professional experience, feel free to download my CV and resume below:</p>
-        <a href="path/to/your-cv.pdf" download>Download My CV</a>
-        <a href="path/to/your-resume.pdf" download>Download My Resume</a>
-    </div>
+<!-- Home Tab -->
+<div id="home" class="tab-content active">
+    <section class="container">
+        <h2>Home</h2>
+        <p>Welcome to my personal page! I'm passionate about RNA biochemistry, global health, and research that makes an impact.</p>
+    </section>
+</div>
 
-</section>
-
-  <!-- Education Section -->
-    <section id="education" class="section-education">
-        <div class="container">
-            <h2>Education</h2>
-            <h3>Yale University</h3>
-            <p><strong>Location:</strong> New Haven, CT</p>
-            <p><strong>Degree:</strong> Bachelor of Science in Molecular Biophysics and Biochemistry</p>
-            <p><strong>Concentration:</strong> Computational Biology and Bioinformatics</p>
-            <p><strong>Minor:</strong> Global Health Studies</p>
-            <p><strong>GPA:</strong> 3.97</p>
-            <p><strong>Expected Graduation:</strong> May 2026</p>
-            <!-- Transcript Download Link -->
-            <p><strong>Download Transcript:</strong> <a href="transcript.pdf" target="_blank">Click here to download</a></p>
+<!-- About Me & Resume Tab -->
+<div id="about" class="tab-content">
+    <section class="container">
+        <h2>About Me & Resume</h2>
+        <p>I'm a Molecular Biophysics and Biochemistry student at Yale University, passionate about research and global health.</p>
+        <div class="download-links">
+            <a href="path/to/your-cv.pdf" download>Download My CV</a>
+            <a href="path/to/your-resume.pdf" download>Download My Resume</a>
         </div>
     </section>
+</div>
 
-    <!-- Contact Section -->
-    <section id="contact" class="section-contact">
-        <div class="container">
-            <h2>Contact Me</h2>
-            <p>Email: <a href="mailto:merat.semma@yale.edu">merat.semma@yale.edu</a></p>
-            <p>LinkedIn: <a href="https://www.linkedin.com/in/merat-semma" target="_blank">LinkedIn Profile</a></p>
-        </div>
+<!-- Work Experience Tab -->
+<div id="work-experience" class="tab-content">
+    <section class="container">
+        <h2>Work Experience</h2>
+        <h3>Hospice Ethiopia</h3>
+        <p><strong>Position:</strong> Intern, Global Health Researcher (Summer 2024)</p>
+        <ul>
+            <li>Created educational teaching videos for healthcare providers in Ethiopia.</li>
+            <li>Conducted 120+ home care visits and integrated spiritual support into palliative care practices.</li>
+        </ul>
+        <!-- Add additional work experiences here -->
     </section>
+</div>
 
-    <!-- Footer -->
-    <footer>
-        <p>&copy; 2024 Merat Semma</p>
-    </footer>
-</body>
-</html>
-styles.css (Styling File)
-css
-Copy code
-/* General Styling */
-body {
-    font-family: 'Arial', sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f0f0f0;
-    color: #333;
-}
-
-nav {
-    background-color: #333;
-    padding: 10px;
-    text-align: center;
-}
-
-nav ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-}
-
-nav ul li {
-    display: inline;
-    margin-right: 20px;
-}
-
-nav ul li a {
-    color: white;
-    text-decoration: none;
-    font-size: 18px;
-}
-
-nav ul li a:hover {
-    color: #4CAF50;
-}
-
-/* Section Styling */
-section {
-    padding: 60px 20px;
-}
-
-.container {
-    max-width: 1000px;
-    margin: 0 auto;
-}
-
-h2 {
-    color: #4CAF50;
-    text-align: center;
-}
-
-p {
-    text-align: center;
-    font-size: 18px;
-}
-
-.section-home {
-    background: #333;
-    color: white;
-    text-align: center;
-    padding: 100px 20px;
-}
-
-.section-home h1 {
-    font-size: 48px;
-}
-
-.section-home span {
-    color: #4CAF50;
-}
-
-.section-education {
-    background-color: white;
-    border-radius: 10px;
-    margin: 10px;
-    padding: 40px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-.section-education p {
-    text-align: left;
-    font-size: 18px;
-    margin: 10px 0;
-}
-
-.section-contact p {
-    text-align: center;
-}
-
-footer {
-    background-color: #333;
-    color: white;
-    text-align: center;
-    padding: 20px 0;
-}
-
-<!-- Work Experience Section -->
-    <section id="work-experience" class="section-work-experience">
-        <div class="container">
-            <h2>Work Experience</h2>
-
-            <h3>Hospice Ethiopia, Addis Ababa, Ethiopia</h3>
-            <p><strong>Position:</strong> Intern, Global Health Researcher</p>
-            <p><strong>Dates:</strong> Summer 2024</p>
-            <ul>
-                <li>Created educational teaching videos for healthcare providers in Ethiopia, improving the accessibility and quality of palliative care.</li>
-                <li>Conducted 120+ home care visits and integrated spiritual support into palliative care practices, working with religious leaders.</li>
-                <li>Collaborated with traditional community organizations to provide culturally sensitive care for grieving families.</li>
-            </ul>
-
-            <h3>Yale University, New Haven, CT</h3>
-            <p><strong>Position:</strong> Peer Liaison</p>
-            <p><strong>Dates:</strong> Present</p>
-            <ul>
-                <li>Provided guidance to 20+ international first-year students on academic, social, and cultural challenges.</li>
-                <li>Organized workshops and community events to foster social integration and support for international students.</li>
-                <li>Helped students navigate campus resources, including academic support services and visa-related assistance.</li>
-            </ul>
-
-            <h3>Yale University, New Haven, CT</h3>
-            <p><strong>Position:</strong> STEM Navigators & FGLI Thrive Mentor</p>
-            <p><strong>Dates:</strong> Present</p>
-            <ul>
-                <li>Mentored 16 FGLI students, including 9 in STEM fields, helping them overcome academic challenges.</li>
-                <li>Organized weekly workshops attended by 15+ students, focusing on study techniques, research opportunities, and networking.</li>
-                <li>Connected students to scholarships, research positions, and ensured access to academic resources.</li>
-            </ul>
-
-            <h3>Yale University, New Haven, CT</h3>
-            <p><strong>Position:</strong> Undergraduate Learning Assistant/Peer Tutor for General Chemistry</p>
-            <p><strong>Dates:</strong> August 2023 – January 2024</p>
-            <ul>
-                <li>Tutored 107+ students in General Chemistry through one-on-one and group study sessions.</li>
-                <li>Helped students improve exam scores using tailored problem-solving strategies and practice problem sets.</li>
-            </ul>
-
-            <h3>Yale University, New Haven, CT</h3>
-            <p><strong>Position:</strong> Lab Safety Staff for Chemistry Department</p>
-            <p><strong>Dates:</strong> February 2023 – May 2024</p>
-            <ul>
-                <li>Managed safety protocols in Yale's Chemistry Department, ensuring compliance with safety standards.</li>
-                <li>Assisted students in handling lab equipment and chemicals, including Infrared Spectroscopy (IR), NMR, and Melt Point apparatus.</li>
-                <li>Organized and calibrated lab equipment to ensure proper functionality for research and instructional purposes.</li>
-            </ul>
-        </div>
-    </section>
-<!-- Contact Section -->
-<section id="contact" class="section-contact">
-    <div class="container">
-        <h2>Contact Me</h2>
-        <p>Email: <a href="mailto:merat.semma@yale.edu">merat.semma@yale.edu</a></p>
-        <p>LinkedIn: <a href="https://www.linkedin.com/in/merat-semma-final" target="_blank">LinkedIn Profile</a></p>
-    </div>
-</section>
-
-<!-- Footer -->
-<footer>
-    <p>&copy; 2024 Merat Semma</p>
-</footer>
-<!-- Extracurricular Activities Section -->
-<section id="extracurriculars" class="section-extracurriculars">
-    <div class="container">
+<!-- Extracurriculars Tab -->
+<div id="extracurriculars" class="tab-content">
+    <section class="container">
         <h2>Extracurricular Activities</h2>
-
         <h3>Yale Ethiopian & Eritrean Students Association & Desta Dance</h3>
         <p><strong>Role:</strong> Co-founder, President</p>
         <p><strong>Dates:</strong> 2022 - present</p>
         <ul>
             <li>Co-founder and lead choreographer for Desta Dance, promoting Ethiopian culture and expression at Yale.</li>
-            <li>Organize mentor-mentee societies to support underclassmen at Yale.</li>
-            <li>Lead workshops to assist high school students in applying to college.</li>
         </ul>
-        <!-- Photo link for Desta Dance -->
-        <p><a href="link_to_desta_dance_photo.jpg" target="_blank">View Desta Dance Photo</a></p>
+        <!-- Add additional extracurriculars here -->
+    </section>
+</div>
 
-        <h3>Yale Women’s Center</h3>
-        <p><strong>Role:</strong> Events Coordinator</p>
-        <p><strong>Dates:</strong> 2023 - present</p>
-        <ul>
-            <li>Collaborate with staff to plan and coordinate events, including the Women's Week series.</li>
-            <li>Oversee a team of 12 staff members to maintain a clean and welcoming environment for all visitors.</li>
-        </ul>
-        <!-- Photo link for Yale Women's Center -->
-        <p><a href="link_to_womens_center_photo.jpg" target="_blank">View Women’s Center Photo</a></p>
-
-        <h3>Women in Chemistry</h3>
-        <p><strong>Role:</strong> Vice-President, Social Chair</p>
-        <p><strong>Dates:</strong> 2022 - present</p>
-        <ul>
-            <li>Organize events and lead the mentorship program for first-year students in Chemistry, Chemical Engineering, and Molecular Biophysics & Biochemistry.</li>
-            <li>Volunteer for MathCounts outreach program, mentoring L.W. Beecher Middle School students.</li>
-            <li>Volunteer at Yale New Haven Hospital.</li>
-        </ul>
-        <!-- Photo link for Women in Chemistry -->
-        <p><a href="link_to_women_in_chemistry_photo.jpg" target="_blank">View Women in Chemistry Photo</a></p>
-
-    </div>
-</section>
-<!-- References Section -->
-<section id="references" class="section-references">
-    <div class="container">
-        <h2>References</h2>
-        <p>Available upon request.</p>
-    </div>
-</section>
-<!-- Honors & Awards Section -->
-<section id="honors" class="section-honors">
-    <div class="container">
+<!-- Honors & Awards Tab -->
+<div id="honors" class="tab-content">
+    <section class="container">
         <h2>Honors & Awards</h2>
-
         <h3>STARS Summer Research Assistant</h3>
-        <p>Selected as a research assistant for the STARS Summer program, gaining hands-on experience in research under the guidance of faculty mentors.</p>
+        <p>Selected as a research assistant for the STARS Summer program, gaining hands-on research experience.</p>
+    </section>
+</div>
 
-        <h3>STARS 1 2023 Cohort</h3>
-        <p>Chosen as one of 200 first-year undergraduates to participate in the STARS 1 program, aimed at motivating students to pursue STEM majors. The program included:</p>
-        <ul>
-            <li>Panel discussions and informational sessions led by students, mentors, and faculty.</li>
-            <li>Professional development and networking opportunities.</li>
-            <li>Regular peer mentor group meetings and one-on-one advising.</li>
-        </ul>
+<!-- Contact Tab -->
+<div id="contact" class="tab-content">
+    <section class="container">
+        <h2>Contact Me</h2>
+        <p>Email: <a href="mailto:merat.semma@yale.edu">merat.semma@yale.edu</a></p>
+        <p>LinkedIn: <a href="https://www.linkedin.com/in/merat-semma-final" target="_blank">LinkedIn Profile</a></p>
+    </section>
+</div>
 
-        <h3>Global Health Scholars</h3>
-        <p>Recognized as a Global Health Scholar, part of a highly competitive program that trains students to address pressing global health challenges through interdisciplinary research and practical engagement.</p>
-    </div>
-</section>
+<!-- Footer -->
+<footer>
+    <p>&copy; 2024 Merat Semma</p>
+</footer>
 
+<script>
+    function showTab(event, tabId) {
+        // Hide all tabs
+        const tabContents = document.querySelectorAll('.tab-content');
+        tabContents.forEach(tab => tab.classList.remove('active'));
 
+        // Deactivate all tabs
+        const tabLinks = document.querySelectorAll('.tab-link');
+        tabLinks.forEach(link => link.classList.remove('active'));
+
+        // Show the clicked tab
+        document.getElementById(tabId).classList.add('active');
+        event.currentTarget.classList.add('active');
+    }
+</script>
+
+</body>
+</html>
